@@ -6,7 +6,7 @@
 	<meta
 		http-equiv="Content-Security-Policy"
 		content="default-src 'self';
-			script-src 'unsafe-inline';
+			script-src 'self' https://d22czkv2r5ogmg.cloudfront.net/eventz/v1.1/javascript/ticket-widget/v1.0/register-widget.min.js 'nonce-regZBwidget';
 			style-src 'self' https://d22czkv2r5ogmg.cloudfront.net/eventz/v1.1/styles/ticket-widget/v1.0/register-widget.min.css">
 
 	<title></title>
@@ -21,7 +21,7 @@
 
 <script src='https://d22czkv2r5ogmg.cloudfront.net/eventz/v1.1/javascript/ticket-widget/v1.0/register-widget.min.js'></script>
 
-<script>
+<script nonce="regZBwidget">
 window.ZBSCheckOutWidget._createWidget({
   eventUrl: 'https://mydemos.zohobackstage.com/embed/BusinessOpportunitiesSummit-Embed/buyTickets#/buyTickets',
   modal: true,
