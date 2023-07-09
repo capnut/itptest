@@ -6,6 +6,47 @@
 	<link rel="stylesheet" href="css/style.css"></style>
 </head>
 <body>
-testme now again
+<h1>Testing Zoho Backstage embed</h1>
+
+<button id="register-widget-1234" style="background: #000;color: white;padding:10px;">Buy Tickets Now</button>
+
+<link rel="stylesheet" href="https://d22czkv2r5ogmg.cloudfront.net/eventz/v1.1/styles/ticket-widget/v1.0/register-widget.min.css">
+
+<script src='https://d22czkv2r5ogmg.cloudfront.net/eventz/v1.1/javascript/ticket-widget/v1.0/register-widget.min.js'></script>
+
+<script>
+window.ZBSCheckOutWidget._createWidget({
+  eventUrl: 'https://mydemos.zohobackstage.com/embed/BusinessOpportunitiesSummit-Embed/buyTickets#/buyTickets',
+  modal: true,
+  widgetOptions: {
+    primaryButtonTheme: {
+      backgroundColor: 'orange',
+      textColor: '#ffffff',
+      borderColor: '#ffffff'
+    },
+    eventHeaderTheme: {
+      backgroundColor: 'orange',
+      textColor: '#ffffff'
+    },
+    visibilityOptions: {
+      eventHeader: true,
+      checkoutProgress: true,
+      showBSBranding: true,
+      dateNVenue: false,
+      ticketClassIds: []
+    },
+	  redirectUrl: '',
+	  affiliate: ''
+  },
+  onOrderComplete: function(event) {
+    console.log(event);
+  },
+  onClose: function(event) {
+    console.log(event);
+  }
+}, 'register-widget-1234')
+</script>
+
+
 </body>
 </html>
