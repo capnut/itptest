@@ -12,19 +12,19 @@
 
 	<title></title>
 	<link rel="stylesheet" href="css/style.css"></style>
+  <link rel="stylesheet" href="https://d22czkv2r5ogmg.cloudfront.net/eventz/v1.1/styles/ticket-widget/v1.0/register-widget.min.css">
 </head>
+
 <body>
 <h1>Testing Zoho Backstage embed</h1>
 
 <button id="mywidget" style="background: #000;color: white;padding:10px;">Buy Tickets Now</button>
 
-<link rel="stylesheet" href="https://d22czkv2r5ogmg.cloudfront.net/eventz/v1.1/styles/ticket-widget/v1.0/register-widget.min.css">
-
 <script src='https://d22czkv2r5ogmg.cloudfront.net/eventz/v1.1/javascript/ticket-widget/v1.0/register-widget.min.js'></script>
 
 <script nonce="regZBwidget">
 window.ZBSCheckOutWidget._createWidget({
-  eventUrl: 'https://www.itp.events/EducationExcellenceAwards2023/buyTickets#/buyTickets',
+  eventUrl: 'https://www.itp.events/embed/EducationExcellenceAwards2023/buyTickets#/buyTickets',
   modal: true,
   widgetOptions: {
     primaryButtonTheme: {
@@ -52,7 +52,7 @@ window.ZBSCheckOutWidget._createWidget({
   onClose: function(event) {
     console.log(event);
   }
-}, 'mywidget')
+}, '#mywidget')
 </script>
 
 
