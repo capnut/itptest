@@ -5,9 +5,9 @@
 	
 	<meta
 		http-equiv="Content-Security-Policy"
-		content="default-src 'none';
+		content="
 			script-src 'self' https://d22czkv2r5ogmg.cloudfront.net/eventz/v1.1/javascript/ticket-widget/v1.0/register-widget.min.js 'nonce-regZBwidget';
-			style-src 'self' https://d22czkv2r5ogmg.cloudfront.net/eventz/v1.1/styles/ticket-widget/v1.0/register-widget.min.css 'unsafe-inline';
+			style-src 'self' https://d22czkv2r5ogmg.cloudfront.net/eventz/v1.1/styles/ticket-widget/v1.0/register-widget.min.css 'nonce-272cb26';
 			frame-src https://www.itp.events/embed/EducationExcellenceAwards2023/">
 
 	<title></title>
@@ -18,7 +18,7 @@
 <body>
 <h1>Testing Zoho Backstage embed</h1>
 
-<button id="mywidget" style="background: #000;color: white;padding:10px;">Buy Tickets Now</button>
+<button id="wgBuyTickets" style="background: #000;color: white;padding:10px;">Buy Tickets Now</button>
 
 <script src='https://d22czkv2r5ogmg.cloudfront.net/eventz/v1.1/javascript/ticket-widget/v1.0/register-widget.min.js'></script>
 
@@ -28,18 +28,18 @@ window.ZBSCheckOutWidget._createWidget({
   modal: true,
   widgetOptions: {
     primaryButtonTheme: {
-      backgroundColor: 'orange',
+      backgroundColor: 'red',
       textColor: '#ffffff',
       borderColor: '#ffffff'
     },
     eventHeaderTheme: {
-      backgroundColor: 'orange',
+      backgroundColor: 'red',
       textColor: '#ffffff'
     },
     visibilityOptions: {
       eventHeader: true,
       checkoutProgress: true,
-      showBSBranding: true,
+      showBSBranding: true, // false?
       dateNVenue: false,
       ticketClassIds: []
     },
@@ -52,9 +52,8 @@ window.ZBSCheckOutWidget._createWidget({
   onClose: function(event) {
     console.log(event);
   }
-}, '#mywidget')
+}, '#wgBuyTickets')
 </script>
-
 
 </body>
 </html>
